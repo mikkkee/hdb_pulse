@@ -43,6 +43,8 @@ body {
     opacity: 1;
 }
 
+.region_note {}
+
 .title {
     font-family: "Oswald";
     font-size: 20px;

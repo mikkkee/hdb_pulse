@@ -13,6 +13,7 @@ var settings = {
     date_paragraph_selector: "#current-date p",
     date_month_selector: "#current-date p .large",
     date_year_selector: "#current-date p .small",
+    region_note_selector: ".region_note",
     play_year: 2015,
 
     alert_style: false,
@@ -185,6 +186,11 @@ function addGlowEffect(svg_selector) {
         .attr("in", "SourceGraphic");
 }
 
+function updateRigonNote(content) {
+    d3.select(settings.region_note_selector)
+    .text(content);
+}
+
 // Set up canvas and tools.
 function init() {
     // Responsive monitor.
@@ -231,9 +237,11 @@ function init() {
             })
             .on("mouseover", function(d) {
                 d3.select(this).attr("class", "graticule hover");
+                updateRigonNote(d["properties"]["name"]);
             })
             .on("mouseout", function(d) {
                 d3.select(this).attr("class", "graticule");
+                updateRigonNote("");
             });
     });
 
