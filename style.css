@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden
+    font-family: "Oswald";
 }
 
 #canvas {
@@ -29,6 +30,19 @@ body {
     background-color: rgba(80, 80, 80, .2);
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 12px;
+    opacity: .3;
+}
+
+.footer:hover {
+    opacity: 1;
+}
+
 .title {
     font-family: "Oswald";
     font-size: 20px;
@@ -37,16 +51,18 @@ body {
 }
 
 .blue {
-    color: #35b8b8;
+    color: #4bffff;
+    /*color: #35b8b8;*/
 }
 
 .graticule {
     fill: #222;
     fill-opacity: .3;
-    stroke: #35b8b8;
+    stroke: #4bffff;
     stroke-width: 1px;
     stroke-opacity: .5;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .hover {
@@ -54,8 +70,8 @@ body {
 }
 
 .blue.glow {
-    box-shadow: 0 0 60px #35b8b8, inset 0 0 60px #35b8b8;
-    text-shadow: 0 0 20px #35b8b8;
+    box-shadow: 0 0 60px #4bffff, inset 0 0 60px #4bffff;
+    text-shadow: 0 0 20px #4bffff;
 }
 
 .date {
@@ -65,7 +81,7 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    box-shadow: 0 0 4px #35b8b8, inset 0 0 1px #35b8b8;
+    box-shadow: 0 0 4px #4bffff, inset 0 0 1px #4bffff;
     font-size: 20;
     font-family: "Inconsolata";
     font-weight: 400;
@@ -105,11 +121,11 @@ body {
 }
 
 .play_btn {
-    fill: #35b8b8;
+    fill: #4bffff;
 }
 
 .play_btn:hover {
-    fill: #358888;
+    fill: #99ffff;
     cursor: pointer;
 }
 
@@ -119,7 +135,7 @@ body {
 
 @-webkit-keyframes pulse {
     0% {
-        box-shadow: 0 0 8px #35b8b8, inset 0 0 8px #35b8b8;
+        box-shadow: 0 0 8px #4bffff, inset 0 0 8px #4bffff;
     }
     100% {
         opacity: 0;

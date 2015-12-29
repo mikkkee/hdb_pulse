@@ -20,6 +20,8 @@ var tools = {
     projection: null,
 };
 
+function resize() { console.log("Resize"); }
+
 // Starts to plot a data point at (lng, lat) with color after delay.
 function plotPoint(lng, lat, color, delay) {
     const svg = d3.select(settings.map_selector);
@@ -173,6 +175,9 @@ function addGlowEffect(svg_selector) {
 
 // Set up canvas and tools.
 function init() {
+    // Responsive monitor.
+    d3.select(window).on("resize", resize);
+
     const canvas = d3.select("#canvas");
     const bbox = canvas.node().getBoundingClientRect();
 
