@@ -14,13 +14,41 @@ var settings = {
     date_month_selector: "#current-date p .large",
     date_year_selector: "#current-date p .small",
     play_year: 2015,
+
+    alert_style: false,
 };
 
 var tools = {
     projection: null,
 };
 
-function resize() { console.log("Resize"); }
+function resize() {
+    console.log("Resize");
+}
+
+function plotAlert(lng, lat, color) {
+    const svg = d3.select(settings.map_selector);
+
+    var ring = svg.append("circle")
+        .attr("class", "ring")
+        .attr("transform", function(d) {
+            return "translate(" + tools.projection([
+                lng,
+                lat
+            ]) + ")"
+        })
+        .attr("r", 6)
+        .style("stroke-width", 2)
+        .style("stroke", color)
+        .style("stroke-opacity", .5)
+        .transition()
+        .ease("linear")
+        .duration(1800)
+        .style("stroke-opacity", 1e-6)
+        .style("stroke-width", 1e-3)
+        .attr("r", 55)
+        .remove();
+}
 
 // Starts to plot a data point at (lng, lat) with color after delay.
 function plotPoint(lng, lat, color, delay) {
@@ -51,27 +79,11 @@ function plotPoint(lng, lat, color, delay) {
                 };
             })
             .remove();
-/*
-        var ring = svg.append("circle")
-            .attr("class", "ring")
-            .attr("transform", function(d) {
-                return "translate(" + tools.projection([
-                    lng,
-                    lat
-                ]) + ")"
-            })
-            .attr("r", 6)
-            .style("stroke-width", 2)
-            .style("stroke", color)
-            .style("stroke-opacity", .5)
-            .transition()
-            .ease("linear")
-            .duration(1800)
-            .style("stroke-opacity", 1e-6)
-            .style("stroke-width", 1e-3)
-            .attr("r", 55)
-            .remove();
-*/            
+
+        // Use alert style.
+        if (settings.alert_style) {
+            plotAlert(lng, lat, color)
+        };
     }, delay);
 }
 
