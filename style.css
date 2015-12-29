@@ -1,0 +1,64 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.canvas {
+    background-color: #222;
+}
+
+.graticule {
+    fill: #222;
+    fill-opacity: .3;
+    stroke: #35b8b8;
+    stroke-width: 1px;
+    stroke-opacity: .5;
+    transition: 0.2s;
+}
+
+.hover {
+    fill: #777;
+}
+
+.month {
+    fill: #cc4c02;
+    font-size: 20;
+    font-family: "Consolas";
+    opacity: .6;
+}
+
+.caption {
+    opacity: 1.;
+}
+
+.ring {
+    fill: none;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*
+    .data-point {
+        fill: #ea4c89;
+        stroke: #ea4c89;
+        animation: pulse 2s forwards;
+    }
+    */
