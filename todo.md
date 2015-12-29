@@ -3,7 +3,6 @@
 2. ease out.
 
 ## Interaction.
+- Left panel.
 - shuffle data once and for all.
 - Replay all data.
-- Display of month.
-- Convert from GeoJson to TopoJson with description unchanged.

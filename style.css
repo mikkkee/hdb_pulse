@@ -17,6 +17,29 @@ body {
     background-color: #222;
 }
 
+#left-panel {
+    position: fixed;
+    float: left;
+    width: 250px;
+    height: 100%;
+    padding: 5px;
+}
+
+.panel {
+    background-color: rgba(80, 80, 80, .2);
+}
+
+.title {
+    font-family: "Oswald";
+    font-size: 20px;
+    clear: both;
+    text-align: center;
+}
+
+.blue {
+    color: #35b8b8;
+}
+
 .graticule {
     fill: #222;
     fill-opacity: .3;
@@ -30,11 +53,47 @@ body {
     fill: #777;
 }
 
-.month {
-    fill: #cc4c02;
+.blue.glow {
+    box-shadow: 0 0 60px #35b8b8, inset 0 0 60px #35b8b8;
+    text-shadow: 0 0 20px #35b8b8;
+}
+
+.date {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: 0 0 4px #35b8b8, inset 0 0 1px #35b8b8;
     font-size: 20;
-    font-family: "Consolas";
+    font-family: "Inconsolata";
+    font-weight: 400;
     opacity: .6;
+    transition: .5s;
+}
+
+.date p {
+    margin: 0;
+    display: block;
+    text-align: center;
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.large {
+    display: block;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: -30px;
+}
+
+.small {
+    font-weight: 300;
+    text-align: center;
+    font-size:14px;
 }
 
 .caption {
@@ -45,9 +104,22 @@ body {
     fill: none;
 }
 
+.play_btn {
+    fill: #35b8b8;
+}
+
+.play_btn:hover {
+    fill: #358888;
+    cursor: pointer;
+}
+
+.hide {
+    display: none !important;
+}
+
 @-webkit-keyframes pulse {
     0% {
-        opacity: 1;
+        box-shadow: 0 0 8px #35b8b8, inset 0 0 8px #35b8b8;
     }
     100% {
         opacity: 0;

@@ -2,6 +2,8 @@
 
 <head>
     <title>Singapore HDB Flat Resale Pulse in 2015</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" , type="text/css" href="style.css">
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
@@ -12,6 +14,15 @@
 
 <body>
     <div id="canvas">
+        <div id="left-panel" class="panel">
+            <p class="title blue">HDB RESALE PULSE</p>
+            <div class="date blue" id="current-date">
+                <p><span class="large">MM</span><span class="small">YYYY</span></p>
+                <svg width="100" height="100">
+                    <path d="M 35.5 75 L 78.9 50 L 35.5 25 L 35.5 75" class="play_btn"></path>
+                </svg>
+            </div>
+        </div>
     </div>
 </body>
 

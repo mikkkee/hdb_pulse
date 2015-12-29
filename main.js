@@ -4,6 +4,16 @@ var settings = {
     point_duration: 1500,
     month_duration: 5000,
     point_radius: 5,
+    map_json: 'data/sg_map.json',
+    map_center: [103.85, 1.32],
+    map_scale: 130000,
+
+    map_selector: "#map",
+    date_container_selector: "#current-date",
+    date_paragraph_selector: "#current-date p",
+    date_month_selector: "#current-date p .large",
+    date_year_selector: "#current-date p .small",
+    play_year: 2015,
 };
 
 var tools = {
@@ -11,9 +21,9 @@ var tools = {
 };
 
 // Starts to plot a data point at (lng, lat) with color after delay.
-function plot_addr(lng, lat, color, delay) {
+function plotPoint(lng, lat, color, delay) {
+    const svg = d3.select(settings.map_selector);
 
-    const svg = d3.select("svg");
     setTimeout(function() {
         var circle = svg.append("circle")
             .attr("fill", color)
@@ -39,7 +49,7 @@ function plot_addr(lng, lat, color, delay) {
                 };
             })
             .remove();
-
+/*
         var ring = svg.append("circle")
             .attr("class", "ring")
             .attr("transform", function(d) {
@@ -59,36 +69,62 @@ function plot_addr(lng, lat, color, delay) {
             .style("stroke-width", 1e-3)
             .attr("r", 55)
             .remove();
+*/            
     }, delay);
 }
 
 // Starts a plot for data points in a month after delay.
 // All data points shall be plotted within duration.
-function plot_month(month, locs, delay, duration) {
-    var text = d3.select("text");
-    // Shuffle the locs to be plotted.
-    // locs = shuffle(locs)
+function plotMonth(month, locs, delay, duration) {
+    var date_container = d3.select(settings.date_container_selector);
+    var date_month = d3.select(settings.date_month_selector);
+    var date_year = d3.select(settings.date_year_selector);
+
     setTimeout(function() {
-        text.style("font-size", 20)
-            .transition()
-            .style("font-size", 25)
-            .text(month)
-            .transition()
-            .style("font-size", 20);
+        date_container.attr("class", "date blue glow")
+        setTimeout(function() {
+            date_container.transition()
+                .attr("class", "date blue");
+        }, 600);
+
+        const mm = month.split("-")[1];
+        const yyyy = month.split("-")[0];
+
+        date_month.text(mm);
+        date_year.text(yyyy);
+
+
         var len = locs.length;
         var each_delay = duration / (len - 1);
         for (var i = 0; i < len; i++) {
             var lat = locs[i]['lat'];
             var lng = locs[i]['lng'];
             var color = locs[i]['color'];
-            plot_addr(lng, lat, color, each_delay * i)
+            plotPoint(lng, lat, color, each_delay * i);
         }
     }, delay);
 }
 
-function play(year, month_duration) {
-    console.log("play");
-    const data_file = "data/" + year + ".json";
+function hidePlayBtn() {
+    const play_btn = d3.select(".play_btn");
+    const date_paragraph = d3.select(settings.date_paragraph_selector);
+    date_paragraph.attr("class", "");
+    play_btn.attr("class", "play_btn hide");
+}
+
+function resetPlayBtn() {
+    const play_btn = d3.select(".play_btn");
+    const date_paragraph = d3.select(settings.date_paragraph_selector);
+    date_paragraph.attr("class", "hide");
+    play_btn.attr("class", "play_btn")
+        .on("click", play);
+}
+
+function play(year) {
+    const yyyy = year ? year : settings.play_year;
+    const data_file = "data/" + yyyy + ".json";
+
+    hidePlayBtn();
 
     d3.json(data_file, function(error, hdb) {
         if (error) return console.warn(error);
@@ -104,59 +140,63 @@ function play(year, month_duration) {
 
         for (var i = 0; i < len; i++) {
             var month_delay = settings.month_duration * i;
-            plot_month(keys[i], hdb[keys[i]], month_delay, month_duration);
+            plotMonth(keys[i], hdb[keys[i]], month_delay, settings.month_duration);
+            if (i == len - 1) {
+                setTimeout(resetPlayBtn, settings.month_duration + month_delay);
+            };
         }
     });
 }
 
-function main() {
-    var minHeight = 768;
-    var minWidth = 1000;
-    var canvas = d3.select("#canvas");
-    var bbox = canvas.node().getBoundingClientRect();
+// Add a glow effect for svg determined by svg_selector.
+function addGlowEffect(svg_selector) {
+    const svg = d3.select(svg_selector);
+    const defs = svg.append("defs");
 
-    var width = bbox['width'] > minWidth ? bbox['width'] : minWidth,
-        height = bbox['height'] > minHeight ? bbox['height'] : minHeight;
-
-    var point_duration = 1500;
-    var month_duration = 5000;
-    var point_radius = 5;
-
-    const svg = d3.select("#canvas").append("svg")
-        .attr("class", "canvas")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("fill", "#fff");
-
-    /* Defines glowing effect filter. */
-    var defs = svg.append("defs");
-
-    var glow = defs.append("filter")
+    const glow = defs.append("filter")
         .attr("id", "glow")
         .attr("height", "2000%")
         .attr("width", "2000%")
         .attr("x", -10)
         .attr("y", -10);
 
-    var feGaussianBlur = glow.append("feGaussianBlur")
+    const feGaussianBlur = glow.append("feGaussianBlur")
         .attr("stdDeviation", 5)
         .attr("result", "coloredBlur");
 
-    var feMerge = glow.append("feMerge");
+    const feMerge = glow.append("feMerge");
     feMerge.append("feMergeNode")
         .attr("in", "coloredBlur");
     feMerge.append("feMergeNode")
         .attr("in", "SourceGraphic");
+}
+
+// Set up canvas and tools.
+function init() {
+    const canvas = d3.select("#canvas");
+    const bbox = canvas.node().getBoundingClientRect();
+
+    const width = bbox['width'] > settings.minWidth ? bbox['width'] : settings.minWidth;
+    const height = bbox['height'] > settings.minHeight ? bbox['height'] : settings.minHeight;
+
+    // Setup SVG element.
+    const svg = d3.select("#canvas").append("svg")
+        .attr("id", "map")
+        .attr("class", "canvas")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("fill", "#fff");
+    addGlowEffect("#canvas svg");
 
     // Load topo json file.
-    d3.json("data/sg_map.json", function(error, sg) {
+    d3.json(settings.map_json, function(error, sg) {
         if (error) throw error;
 
         var subunits = topojson.feature(sg, sg.objects.SG_planning_area);
 
         var projection = d3.geo.mercator()
-            .center([103.85, 1.32])
-            .scale(130000)
+            .center(settings.map_center)
+            .scale(settings.map_scale)
             .translate([width / 2, height / 2]);
 
         tools.projection = projection;
@@ -178,27 +218,14 @@ function main() {
             .on("mouseout", function(d) {
                 d3.select(this).attr("class", "graticule");
             });
-
-        var text = svg.append("text")
-            .attr("text-anchor", "middle")
-            .attr("class", "month")
-            .attr("x", width / 2)
-            .attr("y", height - 40);
-
-        var caption = svg.append("text")
-            .attr("text-anchor", "middle")
-            .text("Singapore HDB Flat Resale Pulse")
-            .attr("class", "month caption")
-            .attr("x", width / 2)
-            .attr("y", height - 10);
-
-
-
-        play(2015, month_duration);
-
-
-
     });
+
+}
+
+function main() {
+    init();
+    resetPlayBtn();
+    // play(2015, settings.month_duration);
 }
 
 window.onload = main;
