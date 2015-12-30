@@ -5,5 +5,6 @@
 ## Interaction.
 -[x] Process data by year.
 -[ ] Try different color map.
+-[ ] High and low limit for each year
 -[ ] Play by year.
 -[ ] Responsive design (bootstrap?).
