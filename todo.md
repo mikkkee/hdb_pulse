@@ -3,6 +3,7 @@
 2. ease out.
 
 ## Interaction.
-- Left panel.
-- shuffle data once and for all.
-- Replay all data.
+-[x] Process data by year.
+-[ ] Try different color map.
+-[ ] Play by year.
+-[ ] Responsive design (bootstrap?).
