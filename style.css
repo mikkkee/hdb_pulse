@@ -77,7 +77,7 @@ body {
 }
 
 .blue.glow {
-    box-shadow: 0 0 20px #4bffff, inset 0 0 30px #4bffff;
+    box-shadow: 0 0 20px #4bffff, inset 0 0 40px #4bffff;
     text-shadow: 0 0 20px #4bffff;
 }
 

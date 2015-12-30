@@ -8,13 +8,17 @@ var settings = {
     map_center: [103.85, 1.32],
     map_scale: 130000,
 
+    data_file_prefix: "data/",
+    data_file_suffix: "_geo_price_colors.json",
+    play_year: 2015,
+    color_map: 'jet',
+
     map_selector: "#map",
     date_container_selector: "#current-date",
     date_paragraph_selector: "#current-date p",
     date_month_selector: "#current-date p .large",
     date_year_selector: "#current-date p .small",
     region_note_selector: ".region_note",
-    play_year: 2015,
 
     alert_style: false,
 };
@@ -114,7 +118,7 @@ function plotMonth(month, locs, delay, duration) {
         for (var i = 0; i < len; i++) {
             var lat = locs[i]['lat'];
             var lng = locs[i]['lng'];
-            var color = locs[i]['color'];
+            var color = locs[i][settings.color_map];
             plotPoint(lng, lat, color, each_delay * i);
         }
     }, delay);
@@ -137,7 +141,7 @@ function resetPlayBtn() {
 
 function play(year) {
     const yyyy = year ? year : settings.play_year;
-    const data_file = "data/" + yyyy + ".json";
+    const data_file = settings.data_file_prefix + yyyy + settings.data_file_suffix;
 
     hidePlayBtn();
 
@@ -188,7 +192,7 @@ function addGlowEffect(svg_selector) {
 
 function updateRigonNote(content) {
     d3.select(settings.region_note_selector)
-    .text(content);
+        .text(content);
 }
 
 // Set up canvas and tools.
