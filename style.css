@@ -36,14 +36,19 @@ body {
     font-family: "Open Sans";
     font-weight: 300;
     font-size: 12px;
+}
+
+.footer p{
     opacity: .3;
 }
 
-.footer:hover {
+.footer p:hover {
     opacity: 1;
 }
 
-.region_note {}
+.region_note {
+    opacity: 1 !important;
+}
 
 .title {
     font-family: "Oswald";
@@ -72,7 +77,7 @@ body {
 }
 
 .blue.glow {
-    box-shadow: 0 0 60px #4bffff, inset 0 0 60px #4bffff;
+    box-shadow: 0 0 20px #4bffff, inset 0 0 30px #4bffff;
     text-shadow: 0 0 20px #4bffff;
 }
 
