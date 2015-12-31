@@ -6,6 +6,11 @@ body {
     font-family: "Oswald";
 }
 
+.large-text {
+    font-family: "Oswald";
+    font-size: 16px;
+}
+
 #canvas {
     position: fixed;
     top: 0;
@@ -23,11 +28,69 @@ body {
     float: left;
     width: 250px;
     height: 100%;
-    padding: 5px;
+    padding: 0px;
 }
 
 .panel {
     background-color: rgba(80, 80, 80, .2);
+}
+
+#current-date {
+    margin-bottom: 20px;
+}
+
+.selector {
+    position: relative;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    display: block;
+}
+
+.selector span {
+    padding: 5px;
+    display: block;
+    background-color: rgba(0,206,209,.1);
+    background-image: url("title-bg.png");
+    text-align: center;
+    border-bottom: solid 2px rgba(80, 80, 80, .2);
+}
+
+.selector > span:hover {
+    background-color: rgba(0,206,209,.3);
+}
+
+.selector ul {
+    display: none;
+    padding-left: 0px;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+.selector ul li {
+    margin-bottom: 1px;
+    float: none;
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+}
+
+.selector ul li span {
+    transition: 0.2s;
+    display:block;
+}
+
+.selector ul li:hover span {
+    background-color: rgba(0,206,209,.3);
+}
+
+.selector:hover ul{
+    display: block;
+    cursor: pointer;
 }
 
 .footer {
@@ -36,6 +99,7 @@ body {
     font-family: "Open Sans";
     font-weight: 300;
     font-size: 12px;
+    margin: 0px 5px;
 }
 
 .footer p{
