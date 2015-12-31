@@ -25,8 +25,7 @@
             </div>
             <div class="options">
                 <div class="selector blue large-text" id="year-selector">
-                    <span>CHOOSE A YEAR</span>
-                    <input type="hidden" name="year-dropdown">
+                    <p><span class="label">YEAR: </span><span id="year-choice">2015</span></p>
                     <ul>
                         <li data-value="2015"><span>2015 (Jan to Sep)</span></li>
                         <li data-value="2014"><span>2014</span></li>
@@ -38,9 +37,8 @@
                     </ul>
                     </input>
                 </div>
-                <div class="selector blue large-text" id="year-selector">
-                    <span>CHOOSE A COLOR STYLE</span>
-                    <input type="hidden" name="year-dropdown">
+                <div class="selector blue large-text" id="color-selector">
+                    <p><span class="label">COLOR: </span><span id="color-choice">Jet</span></p>
                     <ul>
                         <li data-value="autumn_r"><span>Autumn</span></li>
                         <li data-value="cool"><span>Cool</span></li>
@@ -48,6 +46,10 @@
                         <li data-value="jet"><span>Jet</span></li>
                     </ul>
                     </input>
+                </div>
+                <div class="check blue large-text">
+                    <input type="checkbox" id="alert-input" />
+                    <label for="alert-input">Alert Style</label>
                 </div>
             </div>
             <div class="footer blue">

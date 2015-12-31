@@ -195,8 +195,34 @@ function updateRigonNote(content) {
         .text(content);
 }
 
+function updateSpan(element) {
+    console.log(element);
+}
+
+function bindOptions(){
+    $("#year-selector li").click(function(){
+        $("#year-choice").text($(this).attr("data-value"));
+        settings.play_year = $(this).attr("data-value");
+    });
+
+    $("#color-selector li").click(function(){
+        $("#color-choice").text($(this).text());
+        settings.color_map = $(this).attr("data-value");
+    });
+
+    $("#alert-input").change(function() {
+        if ($(this).is(":checked")) {
+            settings.alert_style = true;
+        } else {
+            settings.alert_style = false;
+        }
+    });
+}
+
 // Set up canvas and tools.
 function init() {
+    // Add listeners for options.
+    bindOptions();
     // Responsive monitor.
     d3.select(window).on("resize", resize);
 

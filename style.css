@@ -2,8 +2,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden
-    font-family: "Oswald";
+    overflow: hidden font-family: "Oswald";
 }
 
 .large-text {
@@ -46,17 +45,17 @@ body {
     display: block;
 }
 
-.selector span {
+.selector li > span {
     padding: 5px;
     display: block;
-    background-color: rgba(0,206,209,.1);
+    background-color: rgba(0, 206, 209, .1);
     background-image: url("title-bg.png");
     text-align: center;
     border-bottom: solid 2px rgba(80, 80, 80, .2);
 }
 
-.selector > span:hover {
-    background-color: rgba(0,206,209,.3);
+.selector li > span:hover {
+    background-color: rgba(0, 206, 209, .3);
 }
 
 .selector ul {
@@ -79,18 +78,49 @@ body {
     left: 0;
 }
 
-.selector ul li span {
+.selector ul li > span {
     transition: 0.2s;
-    display:block;
+    display: block;
 }
 
-.selector ul li:hover span {
-    background-color: rgba(0,206,209,.3);
+.selector ul li:hover > span {
+    background-color: rgba(0, 206, 209, .3);
 }
 
-.selector:hover ul{
+.selector:hover ul {
     display: block;
     cursor: pointer;
+}
+
+.selector > p {
+    margin: 0;
+    padding: 5px;
+    display: block;
+    background-color: rgba(0, 206, 209, .1);
+    background-image: url("title-bg.png");
+    text-align: center;
+    border-bottom: solid 2px rgba(80, 80, 80, .2);
+}
+
+.selector > p > span {
+    display: inline;
+}
+
+.selector > p:hover {
+    background-color: rgba(0, 206, 209, .3);
+}
+
+.panel .check {
+    padding: 5px 0px;
+    text-align: center;
+    background-image: url("title-bg.png");
+    background-color: rgba(0, 206, 209, .1);
+    display: block;
+    width: 100%;
+}
+
+.panel .check:hover {
+    background-color: rgba(0, 206, 209, .3);
 }
 
 .footer {
@@ -102,7 +132,7 @@ body {
     margin: 0px 5px;
 }
 
-.footer p{
+.footer p {
     opacity: .3;
 }
 
@@ -180,7 +210,7 @@ body {
 .small {
     font-weight: 300;
     text-align: center;
-    font-size:14px;
+    font-size: 14px;
 }
 
 .caption {
