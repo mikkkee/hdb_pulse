@@ -210,11 +210,12 @@ function bindOptions() {
         settings.color_map = $(this).attr("data-value");
     });
 
-    $("#alert-input").change(function() {
-        if ($(this).is(":checked")) {
-            settings.alert_style = true;
-        } else {
+    $("#alert-selector li").click(function() {
+        $("#alert-choice").text($(this).text());
+        if ($(this).attr("data-value") === "OFF") {
             settings.alert_style = false;
+        } else {
+            settings.alert_style = true;
         }
     });
 }

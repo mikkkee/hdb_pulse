@@ -49,7 +49,7 @@ body {
     padding: 5px;
     display: block;
     background-color: rgba(0, 206, 209, .1);
-    background-image: url("title-bg.png");
+    /* background-image: url("title-bg.png"); */
     text-align: center;
     border-bottom: solid 2px rgba(80, 80, 80, .2);
 }
@@ -97,9 +97,10 @@ body {
     padding: 5px;
     display: block;
     background-color: rgba(0, 206, 209, .1);
-    background-image: url("title-bg.png");
+    /* background-image: url("title-bg.png"); */
     text-align: center;
     border-bottom: solid 2px rgba(80, 80, 80, .2);
+    transition: 0.2s;
 }
 
 .selector > p > span {
