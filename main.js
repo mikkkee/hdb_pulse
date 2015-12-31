@@ -199,13 +199,13 @@ function updateSpan(element) {
     console.log(element);
 }
 
-function bindOptions(){
-    $("#year-selector li").click(function(){
+function bindOptions() {
+    $("#year-selector li").click(function() {
         $("#year-choice").text($(this).attr("data-value"));
         settings.play_year = $(this).attr("data-value");
     });
 
-    $("#color-selector li").click(function(){
+    $("#color-selector li").click(function() {
         $("#color-choice").text($(this).text());
         settings.color_map = $(this).attr("data-value");
     });
