@@ -1,12 +1,18 @@
 var settings = {
-    minHeight: 768,
-    minWidth: 1000,
+
+    minHeight: 219,
+    minWidth: 333,
     point_duration: 1500,
     month_duration: 5000,
     point_radius: 5,
     map_json: 'data/sg_map.json',
+    map_data: null,
     map_center: [103.85, 1.32],
     map_scale: 130000,
+    map_scale_min: 39000,
+
+    gradients_json: "color_gradient.json",
+    gradients: null,
 
     data_file_prefix: "data/",
     data_file_suffix: "_geo_price_colors.json",
@@ -26,10 +32,6 @@ var settings = {
 var tools = {
     projection: null,
 };
-
-function resize() {
-    console.log("Resize");
-}
 
 function plotAlert(lng, lat, color) {
     const svg = d3.select(settings.map_selector);
@@ -199,15 +201,21 @@ function updateSpan(element) {
     console.log(element);
 }
 
-function bindOptions() {
+function updateColorbar() {
+    const colorbar_gradient = 1;
+}
+
+function UIBind() {
     $("#year-selector li").click(function() {
         $("#year-choice").text($(this).attr("data-value"));
         settings.play_year = $(this).attr("data-value");
+        updateColorbar();
     });
 
     $("#color-selector li").click(function() {
         $("#color-choice").text($(this).text());
         settings.color_map = $(this).attr("data-value");
+        updateColorbar();
     });
 
     $("#alert-selector li").click(function() {
@@ -218,20 +226,44 @@ function bindOptions() {
             settings.alert_style = true;
         }
     });
+
+    $("#colorbar-selector li").click(function() {
+        $("#colorbar-choice").text($(this).text());
+        if ($(this).attr("data-value") === "OFF") {
+            settings.show_colorbar = false;
+            updateColorbar();
+        } else {
+            settings.show_colorbar = true;
+            updateColorbar();
+        }
+    });
+}
+
+function getData() {
+    d3.json(settings.sg_map, function(error, sg) {
+        if (error) throw error;
+
+        settings.map = sg;
+    });
 }
 
 // Set up canvas and tools.
 function init() {
+    "use strict";
+    resetCanvas();
+
     // Add listeners for options.
-    bindOptions();
+    UIBind();
     // Responsive monitor.
-    d3.select(window).on("resize", resize);
-
-    const canvas = d3.select("#canvas");
-    const bbox = canvas.node().getBoundingClientRect();
-
-    const width = bbox['width'] > settings.minWidth ? bbox['width'] : settings.minWidth;
-    const height = bbox['height'] > settings.minHeight ? bbox['height'] : settings.minHeight;
+    d3.select(window).on("resize", init);
+    
+    // Resize map.
+    const height = $(window).height();
+    const width = $(window).width();
+    const h_ratio = height / settings.minHeight;
+    const w_ratio = width / settings.minWidth;
+    let ratio = h_ratio < w_ratio ? h_ratio : w_ratio;
+    settings.map_scale = settings.map_scale_min * ratio;
 
     // Setup SVG element.
     const svg = d3.select("#canvas").append("svg")
@@ -240,6 +272,7 @@ function init() {
         .attr("width", width)
         .attr("height", height)
         .attr("fill", "#fff");
+
     addGlowEffect("#canvas svg");
 
     // Load topo json file.
@@ -275,7 +308,10 @@ function init() {
                 updateRigonNote("");
             });
     });
+}
 
+function resetCanvas(){
+    $("#map").remove();
 }
 
 function main() {
@@ -283,5 +319,7 @@ function main() {
     resetPlayBtn();
     // play(2015, settings.month_duration);
 }
+
+
 
 window.onload = main;

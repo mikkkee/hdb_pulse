@@ -157,6 +157,26 @@ body {
     /*color: #35b8b8;*/
 }
 
+#colorbar {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 5px 0px;
+    height: 20px;
+    width: 100%;
+    background: -webkit-linear-gradient(left, #00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000);
+}
+
+.left {
+    position: absolute;
+    left: 0;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+}
+
 .graticule {
     fill: #222;
     fill-opacity: .3;

@@ -1,0 +1,114 @@
+{
+    "2000": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [715.384615385, 5709.87654321],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2001": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [833.333333333, 5256.41025641],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2002": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [665.354330709, 5316.4556962],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2003": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [662.3376623380001, 4797.97979798],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2004": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [1053.33333333, 5058.82352941],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2005": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [966.666666667, 4888.88888889],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2006": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [916.030534351, 4890.90909091],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2007": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [1139.70588235, 6707.31707317],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2008": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [1472.52747253, 7195.12195122],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2009": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [1445.92, 8795.18072289],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2010": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [1777.02702703, 8355.55555556],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2011": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [2272.72727273, 8923.40425532],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2012": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [2375.0, 10410.256410299999],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2013": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [3059.70149254, 9666.66666667],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2014": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [3055.11811024, 9473.68421053],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    },
+    "2015": {
+        "hot_r": "#ffe100, #ffca00, #ffb200, #ff9b00, #ff8300, #ff6b00, #ff5400, #ff3c00, #ff2500, #ff0d00, #f40000, #dd0000, #c50000, #ad0000, #960000, #7e0000, #660000, #4f0000, #370000, #200000, #0b0000",
+        "limit": [2686.56716418, 10645.1612903],
+        "autumn_r": "#ffb300, #ffaa00, #ffa100, #ff9800, #ff8f00, #ff8600, #ff7d00, #ff7400, #ff6b00, #ff6200, #ff5900, #ff5000, #ff4700, #ff3e00, #ff3500, #ff2c00, #ff2300, #ff1a00, #ff1100, #ff0800, #ff0000",
+        "jet": "#00b0ff, #00d4ff, #0ff8e7, #2cffca, #49ffad, #66ff90, #83ff73, #a0ff56, #beff39, #dbff1c, #f8f500, #ffd300, #ffb200, #ff9100, #ff6f00, #ff4e00, #ff2d00, #f60b00, #cd0000, #a40000, #800000",
+        "cool": "#4cb3ff, #55aaff, #5ea1ff, #6798ff, #708fff, #7986ff, #827dff, #8b74ff, #946bff, #9d62ff, #a659ff, #af50ff, #b847ff, #c13eff, #ca35ff, #d32cff, #dc23ff, #e51aff, #ee11ff, #f708ff, #ff00ff"
+    }
+}
