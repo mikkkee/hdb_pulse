@@ -29,7 +29,7 @@ var settings = {
   // Visualization options.
   // Fixed options.
   point_duration: 1500,
-  month_duration: 5000,
+  month_duration: 6000,
   point_radius: 5,
 
   // DOM selectors.
@@ -221,9 +221,10 @@ function updateColorbar() {
   $(left).text(low);
   $(right).text(high);
 
-  colorbar.css({
-    "background" : "-webkit-linear-gradient(left, " + grad + ")",
-  });
+  colorbar.css("background: -webkit-linear-gradient(left, " + grad + ")");
+  colorbar.css("background: -o-linear-gradient(right, " + grad + ")");
+  colorbar.css("background: -moz-linear-gradient(right, " + grad + ")");
+  colorbar.css("background: linear-gradient(to right, " + grad + ")");
 }
 
 function bindUI() {
@@ -342,7 +343,7 @@ function init() {
   settings.map_width = $(window).width();
   const h_ratio = settings.map_height / settings.base_height;
   const w_ratio = settings.map_width / settings.base_width;
-  let ratio = h_ratio < w_ratio ? h_ratio : w_ratio;
+  var ratio = h_ratio < w_ratio ? h_ratio : w_ratio;
   settings.map_scale = settings.map_scale_min * ratio;
 
   getMapJSON(drawMap);
