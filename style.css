@@ -97,7 +97,6 @@ body {
   padding: 5px;
   display: block;
   background-color: rgba(0, 206, 209, 0.1);
-  /* background-image: url("title-bg.png"); */
   text-align: center;
   border-bottom: solid 2px rgba(80, 80, 80, 0.2);
   transition: 0.2s;
@@ -111,16 +110,15 @@ body {
   background-color: rgba(0, 206, 209, 0.3);
 }
 
-.panel 0.check {
+.panel .check {
   padding: 5px 0px;
   text-align: center;
-  background-image: url("title-bg.png");
   background-color: rgba(0, 206, 209, 0.1);
   display: block;
   width: 100%;
 }
 
-.panel 0.check:hover {
+.panel .check:hover {
   background-color: rgba(0, 206, 209, 0.3);
 }
 
@@ -165,7 +163,6 @@ body {
   width: 100%;
   font-family: "Inconsolata";
   font-size: 18px;
-  font-weight: 400;
   opacity: 0.8;
 }
 
@@ -206,9 +203,8 @@ body {
   height: 100px;
   border-radius: 50px;
   box-shadow: 0 0 4px #4bffff, inset 0 0 1px #4bffff;
-  font-size: 20;
+  font-size: 20px;
   font-family: "Inconsolata";
-  font-weight: 400;
   opacity: 0.6;
   transition: 0.5s;
 }
@@ -234,10 +230,6 @@ body {
   font-weight: 300;
   text-align: center;
   font-size: 14px;
-}
-
-.caption {
-  opacity: 1.;
 }
 
 .ring {
