@@ -123,12 +123,13 @@ body {
 }
 
 .footer {
+  width: 100%;
   position: absolute;
   bottom: 0;
   font-family: "Open Sans";
   font-weight: 300;
   font-size: 12px;
-  margin: 0px 5px;
+  padding: 0px 0px;
 }
 
 .footer p {
@@ -137,6 +138,20 @@ body {
 
 .footer p:hover {
   opacity: 1;
+}
+
+.sign {
+  padding: 0px 5px;
+  display: block;
+  text-align: right;
+}
+
+.sign a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.sign a:visited {
 }
 
 .region_note {
