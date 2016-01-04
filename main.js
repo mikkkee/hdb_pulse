@@ -202,10 +202,6 @@ function updateRegionNote(content) {
     .text(content);
 }
 
-function updateSpan(element) {
-  console.log(element);
-}
-
 function updateColorbar() {
   const colorbar = $("#colorbar");
   const left = colorbar.children()[0];
@@ -218,7 +214,7 @@ function updateColorbar() {
   }
 
   const grad = settings.gradients[settings.play_year][settings.colormap];
-  const limit = settings.gradients[settings.play_year]['limit'];
+  const limit = settings.gradients[settings.play_year].limit;
   const low = (limit[0] / 1000).toFixed(1) + "k";
   const high = (limit[1] / 1000).toFixed(1) + "k";
 
