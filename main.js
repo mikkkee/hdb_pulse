@@ -220,11 +220,13 @@ function updateColorbar() {
 
   $(left).text(low);
   $(right).text(high);
+  console.log(grad);
 
-  colorbar.css("background: -webkit-linear-gradient(left, " + grad + ")");
-  colorbar.css("background: -o-linear-gradient(right, " + grad + ")");
-  colorbar.css("background: -moz-linear-gradient(right, " + grad + ")");
-  colorbar.css("background: linear-gradient(to right, " + grad + ")");
+  colorbar.css("background", "-webkit-linear-gradient(left, " + grad + ")");
+  colorbar.css("background", "-o-linear-gradient(right, " + grad + ")");
+  colorbar.css("background", "-moz-linear-gradient(right, " + grad + ")");
+  colorbar.css("background", "linear-gradient(to right, " + grad + ")");
+
 }
 
 function bindUI() {
