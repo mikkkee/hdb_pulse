@@ -1,77 +1,77 @@
 <html>
 
 <head>
-    <title>Singapore HDB Flat Resale Pulse in 2015</title>
-    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" , type="text/css" href="style.css">
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="http://d3js.org/topojson.v1.min.js"></script>
-    <script src="http://benschmidt.org/colorbar/colorbar.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="main.js"></script>
+  <title>Singapore HDB Flat Resale Pulse in 2015</title>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" , type="text/css" href="style.css">
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+  <script src="http://benschmidt.org/colorbar/colorbar.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="main.js"></script>
 </head>
 
 <body>
-    <div id="canvas">
-        <div id="left-panel" class="panel">
-            <p class="title blue">HDB RESALE PULSE</p>
-            <div class="date blue" id="current-date">
-                <p><span class="large">MM</span><span class="small">YYYY</span></p>
-                <svg width="100" height="100">
-                    <path d="M 35.5 75 L 78.9 50 L 35.5 25 L 35.5 75" class="play_btn"></path>
-                </svg>
-            </div>
-            <div class="options">
-                <div class="selector blue large-text" id="year-selector">
-                    <p><span class="label">YEAR: </span><span id="year-choice">2015</span></p>
-                    <ul>
-                        <li data-value="2015"><span>2015 (Jan to Sep)</span></li>
-                        <li data-value="2014"><span>2014</span></li>
-                        <li data-value="2013"><span>2013</span></li>
-                        <li data-value="2012"><span>2012</span></li>
-                        <li data-value="2011"><span>2011</span></li>
-                        <li data-value="2010"><span>2010</span></li>
-                        <li data-value="2009"><span>2009</span></li>
-                    </ul>
-                    </input>
-                </div>
-                <div class="selector blue large-text" id="color-selector">
-                    <p><span class="label">COLOR: </span><span id="color-choice">Jet</span></p>
-                    <ul>
-                        <li data-value="autumn_r"><span>Autumn</span></li>
-                        <li data-value="cool"><span>Cool</span></li>
-                        <li data-value="hot_r"><span>Hot</span></li>
-                        <li data-value="jet"><span>Jet</span></li>
-                    </ul>
-                    </input>
-                </div>
-                <div class="selector blue large-text" id="alert-selector">
-                    <p><span class="label">Alert Style: </span><span id="alert-choice">OFF</span></p>
-                    <ul>
-                        <li data-value="ON"><span>ON</span></li>
-                        <li data-value="OFF"><span>OFF</span></li>
-                    </ul>
-                </div>
-                <div class="selector blue large-text" id="colorbar-selector">
-                    <p><span class="label">Colorbar: </span><span id="colorbar-choice">OFF</span></p>
-                    <ul>
-                        <li data-value="ON"><span>ON</span></li>
-                        <li data-value="OFF"><span>OFF</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="colorbar" class="colorbar">
-                <span class="left middle">low</span>
-                <span class="right middle">high</span>
-            </div>
-            <div class="footer blue">
-                <div class="region_note"></div>
-                <p>This page animates the resale price pulse of HDB flat in Singapore. Darker color indicates lower price. Raw data of resale records are obtained from data.gov.sg.</p>
-            </div>
+  <div id="canvas">
+    <div id="left-panel" class="panel">
+      <p class="title blue">HDB RESALE PULSE</p>
+      <div class="date blue" id="current-date">
+        <p><span class="large">MM</span><span class="small">YYYY</span></p>
+        <svg width="100" height="100">
+          <path d="M 35.5 75 L 78.9 50 L 35.5 25 L 35.5 75" class="play_btn"></path>
+        </svg>
+      </div>
+      <div class="options">
+        <div class="selector blue large-text" id="year-selector">
+          <p><span class="label">YEAR: </span><span id="year-choice">2015</span></p>
+          <ul>
+            <li data-value="2015"><span>2015 (Jan to Sep)</span></li>
+            <li data-value="2014"><span>2014</span></li>
+            <li data-value="2013"><span>2013</span></li>
+            <li data-value="2012"><span>2012</span></li>
+            <li data-value="2011"><span>2011</span></li>
+            <li data-value="2010"><span>2010</span></li>
+            <li data-value="2009"><span>2009</span></li>
+          </ul>
+          </input>
         </div>
+        <div class="selector blue large-text" id="color-selector">
+          <p><span class="label">COLOR: </span><span id="color-choice">Jet</span></p>
+          <ul>
+            <li data-value="autumn_r"><span>Autumn</span></li>
+            <li data-value="cool"><span>Cool</span></li>
+            <li data-value="hot_r"><span>Hot</span></li>
+            <li data-value="jet"><span>Jet</span></li>
+          </ul>
+          </input>
+        </div>
+        <div class="selector blue large-text" id="alert-selector">
+          <p><span class="label">Alert Style: </span><span id="alert-choice">OFF</span></p>
+          <ul>
+            <li data-value="ON"><span>ON (May lag your computer)</span></li>
+            <li data-value="OFF"><span>OFF</span></li>
+          </ul>
+        </div>
+        <div class="selector blue large-text" id="colorbar-selector">
+          <p><span class="label">Colorbar: </span><span id="colorbar-choice">OFF</span></p>
+          <ul>
+            <li data-value="ON"><span>ON</span></li>
+            <li data-value="OFF"><span>OFF</span></li>
+          </ul>
+        </div>
+      </div>
+      <div id="colorbar" class="colorbar hide">
+        <span class="left middle">low</span>
+        <span class="right middle">high</span>
+      </div>
+      <div class="footer blue">
+        <div class="region_note"></div>
+        <p>This page animates the resale price pulse of HDB flat in Singapore. Darker color indicates lower price. Raw data of resale records are obtained from data.gov.sg.</p>
+      </div>
     </div>
+  </div>
 </body>
 
 </html>
