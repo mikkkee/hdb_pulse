@@ -2,7 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden font-family: "Oswald";
+  overflow: hidden;
+  font-family: "Oswald";
 }
 
 .large-text {
@@ -142,7 +143,7 @@ body {
 }
 
 .region_note {
-  opacity: 1 !important;
+  opacity: 1;
 }
 
 .title {
@@ -154,7 +155,6 @@ body {
 
 .blue {
   color: #4bffff;
-  /*color: #35b8b8;*/
 }
 
 #colorbar {
@@ -167,7 +167,7 @@ body {
   font-family: "Inconsolata";
   font-size: 18px;
   font-weight: 400;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .left {
@@ -257,21 +257,3 @@ body {
 .hide {
   display: none !important;
 }
-
-@-webkit-keyframes pulse {
-  0% {
-    box-shadow: 0 0 8px #4bffff, inset 0 0 8px #4bffff;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-
-/*
-    .data-point {
-        fill: #ea4c89;
-        stroke: #ea4c89;
-        animation: pulse 2s forwards;
-    }
-    */
