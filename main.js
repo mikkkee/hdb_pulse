@@ -220,7 +220,6 @@ function updateColorbar() {
 
   $(left).text(low);
   $(right).text(high);
-  console.log(grad);
 
   colorbar.css("background", "-webkit-linear-gradient(left, " + grad + ")");
   colorbar.css("background", "-o-linear-gradient(right, " + grad + ")");
