@@ -4,8 +4,8 @@ HDB Pulse shows the animation of Singapore HDB flat resale price pulse in
 recent years. Each resale record is represented by a solid circle, whose color
 is determined by its recorded price (SGD/sqm), on Singapore map.
 
-![Screenshot][1]
 ![Animation][2]
+![Screenshot][1]
 
 ## About
 * Q: Where did you get all the data?
