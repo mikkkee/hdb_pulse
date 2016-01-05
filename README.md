@@ -17,7 +17,7 @@ is determined by its recorded price (SGD / sqm), on map.
 * Q: What do the data mean?
 
   A: Each resale is represented by a solid circle plotted at the location of its
-  BLK. The color for each color is determined by its price (SGD / sqm). The
+  BLK. The color for each circle is determined by its price (SGD/sqm). The
   resale records are shown by the sequence of month. During each month, the
   records are shown randomly since the original data don't have any sequence
   in each month.
