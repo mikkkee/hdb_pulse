@@ -47,7 +47,7 @@ var tools = {
 
 // Plots alert style circle at (lng, lat) with color.
 function plotAlert(lng, lat, color) {
-  const map = d3.select(settings.map_selector);
+  var map = d3.select(settings.map_selector);
 
   map.append("circle").attr("class", "ring")
     .attr("transform", function() {
@@ -71,10 +71,10 @@ function plotAlert(lng, lat, color) {
 
 // Plots a data point at (lng, lat) with color after delay.
 function plotPoint(lng, lat, color, delay) {
-  const map = d3.select(settings.map_selector);
+  var map = d3.select(settings.map_selector);
 
   setTimeout(function() {
-    const circle = map.append("circle")
+    var circle = map.append("circle")
       .style("filter", "url(#glow)")
       .attr("fill", color)
       .attr("r", settings.point_radius)
@@ -104,9 +104,9 @@ function plotPoint(lng, lat, color, delay) {
 // Plots for data points in a month after delay.
 // All data points shall be plotted within duration.
 function plotMonth(month, locs, delay, duration) {
-  const date_container = d3.select(settings.date_container_selector);
-  const date_month = d3.select(settings.date_month_selector);
-  const date_year = d3.select(settings.date_year_selector);
+  var date_container = d3.select(settings.date_container_selector);
+  var date_month = d3.select(settings.date_month_selector);
+  var date_year = d3.select(settings.date_year_selector);
 
   setTimeout(function() {
     date_container.attr("class", "date blue glow");
@@ -114,18 +114,18 @@ function plotMonth(month, locs, delay, duration) {
       date_container.transition().attr("class", "date blue");
     }, 600);
 
-    const mm = month.split("-")[1];
-    const yyyy = month.split("-")[0];
+    var mm = month.split("-")[1];
+    var yyyy = month.split("-")[0];
 
     date_month.text(mm);
     date_year.text(yyyy);
 
-    const len = locs.length;
-    const each_delay = duration / (len - 1);
+    var len = locs.length;
+    var each_delay = duration / (len - 1);
     for (var i = 0; i < len; i++) {
-      const lat = locs[i].lat;
-      const lng = locs[i].lng;
-      const color = locs[i][settings.colormap];
+      var lat = locs[i].lat;
+      var lng = locs[i].lng;
+      var color = locs[i][settings.colormap];
       plotPoint(lng, lat, color, each_delay * i);
     }
   }, delay);
@@ -133,38 +133,38 @@ function plotMonth(month, locs, delay, duration) {
 
 // Hides play button and shows current date: MM YYYY.
 function hidePlayBtn() {
-  const play_btn = d3.select(".play_btn");
-  const date_paragraph = d3.select(settings.date_paragraph_selector);
+  var play_btn = d3.select(".play_btn");
+  var date_paragraph = d3.select(settings.date_paragraph_selector);
   date_paragraph.attr("class", "");
   play_btn.attr("class", "play_btn hide");
 }
 
 // Shows play button and hides current date section.
 function resetPlayBtn() {
-  const play_btn = d3.select(".play_btn");
-  const date_paragraph = d3.select(settings.date_paragraph_selector);
+  var play_btn = d3.select(".play_btn");
+  var date_paragraph = d3.select(settings.date_paragraph_selector);
   date_paragraph.attr("class", "hide");
   play_btn.attr("class", "play_btn")
     .on("click", play);
 }
 
 function play(year) {
-  const yyyy = year ? year : settings.play_year;
-  const data_file = settings.data_file_prefix + yyyy + settings.data_file_suffix;
+  var yyyy = year ? year : settings.play_year;
+  var data_file = settings.data_file_prefix + yyyy + settings.data_file_suffix;
 
   hidePlayBtn();
 
   d3.json(data_file, function(error, hdb) {
     if (error) return console.warn(error);
     // Sort months.
-    const keys = [];
+    var keys = [];
     for (var month in hdb) {
       if (hdb.hasOwnProperty(month)) {
         keys.push(month);
       }
     }
     keys.sort();
-    const len = keys.length;
+    var len = keys.length;
 
     for (var i = 0; i < len; i++) {
       var month_delay = settings.month_duration * i;
@@ -177,10 +177,10 @@ function play(year) {
 
 // Add a glow effect for svg determined by svg_selector.
 function addGlowEffect(svg_selector) {
-  const svg = d3.select(svg_selector);
-  const defs = svg.append("defs");
+  var svg = d3.select(svg_selector);
+  var defs = svg.append("defs");
 
-  const glow = defs.append("filter")
+  var glow = defs.append("filter")
     .attr("id", "glow")
     .attr("height", "2000%")
     .attr("width", "2000%")
@@ -191,7 +191,7 @@ function addGlowEffect(svg_selector) {
     .attr("stdDeviation", 5)
     .attr("result", "coloredBlur");
 
-  const feMerge = glow.append("feMerge");
+  var feMerge = glow.append("feMerge");
   feMerge.append("feMergeNode").attr("in", "coloredBlur");
   feMerge.append("feMergeNode").attr("in", "SourceGraphic");
 }
@@ -203,9 +203,9 @@ function updateRegionNote(content) {
 }
 
 function updateColorbar() {
-  const colorbar = $("#colorbar");
-  const left = colorbar.children()[0];
-  const right = colorbar.children()[1];
+  var colorbar = $("#colorbar");
+  var left = colorbar.children()[0];
+  var right = colorbar.children()[1];
 
   if (settings.colorbar) {
     colorbar.removeClass("hide");
@@ -213,10 +213,10 @@ function updateColorbar() {
     colorbar.addClass("hide");
   }
 
-  const grad = settings.gradients[settings.play_year][settings.colormap];
-  const limit = settings.gradients[settings.play_year].limit;
-  const low = (limit[0] / 1000).toFixed(1) + "k";
-  const high = (limit[1] / 1000).toFixed(1) + "k";
+  var grad = settings.gradients[settings.play_year][settings.colormap];
+  var limit = settings.gradients[settings.play_year].limit;
+  var low = (limit[0] / 1000).toFixed(1) + "k";
+  var high = (limit[1] / 1000).toFixed(1) + "k";
 
   $(left).text(low);
   $(right).text(high);
@@ -293,7 +293,7 @@ function resetCanvas() {
 
 function drawMap() {
   // Setup SVG element.
-  const svg = d3.select("#canvas").append("svg")
+  var svg = d3.select("#canvas").append("svg")
     .attr("id", "map")
     .attr("class", "canvas")
     .attr("width", settings.map_width)
@@ -302,14 +302,14 @@ function drawMap() {
 
   addGlowEffect(settings.map_selector);
 
-  const sg = settings.map_data;
-  const subunits = topojson.feature(sg, sg.objects.SG_planning_area);
+  var sg = settings.map_data;
+  var subunits = topojson.feature(sg, sg.objects.SG_planning_area);
   tools.projection = d3.geo.mercator()
     .center(settings.map_center)
     .scale(settings.map_scale)
     .translate([settings.map_width / 2, settings.map_height / 2]);
 
-  const path = d3.geo.path().projection(tools.projection);
+  var path = d3.geo.path().projection(tools.projection);
 
   svg.selectAll("path")
     .data(subunits.features)
@@ -342,8 +342,8 @@ function init() {
   // Sets map scale to adapt window size.
   settings.map_height = $(window).height();
   settings.map_width = $(window).width();
-  const h_ratio = settings.map_height / settings.base_height;
-  const w_ratio = settings.map_width / settings.base_width;
+  var h_ratio = settings.map_height / settings.base_height;
+  var w_ratio = settings.map_width / settings.base_width;
   var ratio = h_ratio < w_ratio ? h_ratio : w_ratio;
   settings.map_scale = settings.map_scale_min * ratio;
 
